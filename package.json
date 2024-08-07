@@ -1,5 +1,5 @@
 {
-  "name": "app-router-auth",
+  "name": "next-auth-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,11 +18,12 @@
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
-    "@vercel/postgres": "^0.7.2",
+    "@vercel/postgres": "^0.9.0",
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "drizzle-orm": "^0.30.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.2",
     "jose": "^5.2.3",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.356.0",
@@ -33,6 +34,7 @@
     "server-only": "^0.0.1",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.16.5",
     "zod": "^3.22.4"
   },
   "devDependencies": {
