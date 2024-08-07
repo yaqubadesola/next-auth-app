@@ -1,7 +1,7 @@
 'use server';
 
 import { db } from '@/drizzle/db';
-import { users } from '@/drizzle/schema';
+import { users } from "@/drizzle/schema";
 import {
   FormState,
   LoginFormSchema,
@@ -110,6 +110,7 @@ export async function login(
   // 4. If login successful, create a session for the user and redirect
   const userId = user.id.toString();
   await createSession(userId);
+  
 }
 
 export async function logout() {

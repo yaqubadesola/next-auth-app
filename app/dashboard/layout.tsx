@@ -5,7 +5,7 @@ import { PackageIcon } from '@/components/ui/icons';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getUser } from '@/app/auth/03-dal';
+// import { getUser } from '@/app/auth/03-dal';
 
 const navLinks = [
   { title: 'Home', href: '/dashboard', badge: 0 },
@@ -20,7 +20,7 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getUser();
+  // const user = await getUser();
 
   const activeLink = '/dashboard';
 

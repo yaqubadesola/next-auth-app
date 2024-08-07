@@ -7,8 +7,11 @@ import { verifySession } from '@/app/auth/02-stateless-session';
 
 export const getUser = cache(async () => {
   const session = await verifySession();
-  if (!session) return null;
+  if (!session) {
+    console.log('No session is here');
 
+    return null;
+  }
   try {
     const data = await db.query.users.findMany({
       where: eq(users.id, session.userId),

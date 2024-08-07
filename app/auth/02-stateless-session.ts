@@ -5,7 +5,7 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-const secretKey = process.env.SECRET;
+const secretKey = process.env.APP_SECRET;
 const key = new TextEncoder().encode(secretKey);
 
 export async function encrypt(payload: SessionPayload) {
@@ -18,9 +18,11 @@ export async function encrypt(payload: SessionPayload) {
 
 export async function decrypt(session: string | undefined = '') {
   try {
+    // console.log("1 cookie decyption in progress = ",session)
     const { payload } = await jwtVerify(session, key, {
       algorithms: ['HS256'],
     });
+    // console.log("cookie decyption in progress = ",payload)
     return payload;
   } catch (error) {
     return null;
